@@ -1,0 +1,46 @@
+@import url(../css/globals.css);
+
+.resumen {
+  margin: 1rem 0;
+  border-radius: 0;
+}
+.resumen p {
+  text-align: center;
+  color: var(--pri-font-color);
+}
+
+.servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.servicios img {
+  border-radius: 4px;
+}
+.servicios article {
+  padding: 1rem;
+  gap: 1rem;
+  background-color: var(--surface2-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.servicios .detalles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.servicios .detalles .texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.servicios .detalles .boton-contacto {
+  display: flex;
+  justify-content: end;
+}
+@media (width <= 1150px) {
+  .servicios article {
+    flex-direction: column;
+  }
+}
