@@ -36,7 +36,17 @@
 .redes .redes-iconos {
   display: flex;
   gap: 1rem;
+  transition: all 0.5s ease-in-out;
 }
 .redes .redes-iconos a img {
   width: 3rem;
+}
+.redes .redes-iconos a:hover {
+  transform: scale(107%);
+}
+
+@media (475px >= width) {
+  .formulario form {
+    width: 100vw;
+  }
 }

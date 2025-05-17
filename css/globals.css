@@ -59,11 +59,13 @@ nav ul li {
   margin: 0 3px;
   border-radius: 4px;
 }
-nav ul li a {
+nav ul li a,
+details ul li a {
   text-decoration: none;
   color: var(--sec-font-color);
 }
-nav ul li a b {
+nav ul li a b,
+details ul li a b {
   font-weight: 600;
 }
 
@@ -71,6 +73,9 @@ header nav ul li:hover {
   background-color: var(--primary-color);
   box-shadow: 0 0 3px var(--secondary-color);
   transform: scale(105%);
+}
+details {
+  display: none;
 }
 
 section {
@@ -93,7 +98,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: var(--primary-darker-color);
-  color: var(--alt-font-color);
+  color: var(--surface2-color);
   box-shadow: 0px -1px 25px var(--surface-color);
 }
 
@@ -135,28 +140,67 @@ textarea:focus-visible {
 /* Media Queries */
 /* MOBILE */
 @media (475px >= width) {
+  body {
+    font-size: 1rem;
+  }
   header {
     padding: 1rem 0;
     flex-direction: column;
   }
-  nav ul {
-    flex-direction: column;
+  header a,
+  header nav {
+    display: none;
   }
-  nav ul li {
-    margin: 5px 0;
+  details {
+    display: block;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  details img {
+    width: 5rem;
+  }
+  details summary {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  details summary span {
+    color: var(--sec-font-color);
+  }
+  details ul,
+  details ul li,
+  details ul li a {
     width: 100vw;
   }
-  nav ul li a {
-    font-size: 1.15rem;
+  details ul li a {
+    display: block;
+    padding: 5px 0;
   }
-  nav ul li:hover {
-    transform: scale(105%);
+  details ul li {
+    margin: 5px 0;
+  }
+  details ul li a:hover {
+    transform: scale(110%);
     border-radius: 0;
     background-color: var(--primary-color);
   }
+
+  details summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+  details ul {
+    background-color: var(--primary-dark-color);
+    list-style: none;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
 /* TABLET */
-@media (1150px >= width >= 475px) {
+@media (475px <= width <= 1150px) {
 }
 /* PC */
 @media (width >= 1150px) {
