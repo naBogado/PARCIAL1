@@ -44,3 +44,10 @@
     flex-direction: column;
   }
 }
+@media (475px >= width) {
+  .servicios .detalles .boton-contacto {
+    margin-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
