@@ -53,3 +53,19 @@
 .testimonios .testimonios-container article img {
   width: 5rem;
 }
+
+@media (475px >= width) {
+  .cards .card-container {
+    flex-direction: column;
+    overflow-x: unset;
+    padding: 1rem 0;
+  }
+  .cards .card-container article {
+    min-width: unset;
+    width: auto;
+    margin: 0;
+  }
+  .testimonios .testimonios-container article {
+    flex-direction: column;
+  }
+}
